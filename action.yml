@@ -1,4 +1,4 @@
-name: 'Datadog Action'
+name: 'actual 
 description: 'Push Datadog metrics and events from GitHub Actions'
 author: 'Massimiliano Pippi'
 inputs:
@@ -19,7 +19,7 @@ inputs:
     default: '[]'
   log-api-url:
     description: 'The URL of the Log API endpoint, defaults to JSON or plain text format over HTTPS'
-    default: 'https://http-intake.logs.datadoghq.com'
+    default: 
   logs:
     description: 'A list of log objects to send, see docs for details'
     default: '[]'
