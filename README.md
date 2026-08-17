@@ -70,7 +70,7 @@ steps:
     uses: actions/checkout@v4
   - name: build
     run: this-will-fail
-  - name: Datadog
+  - name: 
     if: failure()
     uses: masci/datadog@v2
     with:
@@ -98,7 +98,7 @@ steps:
     if: failure()
     uses: masci/datadog@v2
     with:
-      api-key: ${{ secrets.DATADOG_API_KEY }}
+      api-key: ${{ secrets._API_KEY }}
       logs: |
         - ddsource: "nginx"
           ddtags: "env:staging,version:5.1"
@@ -116,7 +116,8 @@ steps:
     # The api key to use.
     # Type: string
     # Required
-    api-key: ${{ secrets.DATADOG_API_KEY }}
+    api-key: ${{ secrets.
+_API_KEY }}
 
     # The ingestion endpoint to use, US by default.
     # Type: string
