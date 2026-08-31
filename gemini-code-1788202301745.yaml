@@ -1,0 +1,12 @@
+- name: Send Datadog Build Metric
+  uses: masci/datadog@v2
+  with:
+    api-key: ${{ secrets.DATADOG_API_KEY }}
+    metrics: |
+      - type: "count"
+        name: "test.runs.count"
+        value: 1.0
+        host: ${{ github.repository_owner }}
+        tags:
+          - "project:${{ github.repository }}"
+          - "branch:${{ github.head_ref }}"
